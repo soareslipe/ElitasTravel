@@ -1,0 +1,616 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  appearance: none;
+  text-decoration: none;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url("./Assets/padrao-blue-body.png");
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: url("./Assets/cursor-normal.png"), pointer;
+}
+
+.wrapper {
+  width: 66.25vw;
+  margin-inline: auto;
+}
+
+a:hover,
+button:hover {
+  cursor: url("./Assets/cursor.png"), pointer;
+}
+
+.button-style{ 
+  border: 0.1rem solid rgba(124, 124, 124, 0.5);
+  border-radius: 0.5rem;
+  background: linear-gradient(rgb(255, 255, 255), rgb(177, 177, 177));
+}
+
+.button-style{
+  font-size: 1.05vw;
+  color: black;
+  font-weight: 400;
+}
+
+.button-style:hover {
+  background: linear-gradient(hsl(359, 79%, 44%), hsl(2, 81%, 38%));
+  color: white;
+}
+
+/*========== HEADER ==========*/
+header {
+  background-image: url("./Assets/background-elitas.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  height: 28.64vw;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+body #home{
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  height: 14.06vw;
+  width: 100%;
+  top: 0;
+}
+
+header .wrapper .texts {
+  margin-top: 2.4vw;
+}
+
+header .wrapper img {
+  width: 18.594vw;
+  height: 5.416vw;
+}
+
+header .wrapper .title {
+  color: red;
+  font-size: 1.15vw;
+  margin-top: 2.23vw;
+  font-weight: 700;
+}
+
+header .wrapper .subtitle {
+  color: black;
+  font-size: .83vw;
+  margin-top: 2.7vw;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 40;
+}
+
+/*========== AUTHORS ==========*/
+.authors {
+  position: fixed;
+  right: 0;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  border-radius: 0.9rem;
+
+  width: 6rem;
+  height: 4rem;
+  background: #0592bd;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 200ms ease;
+}
+
+.authors:hover {
+  padding-inline: 1.5rem;
+  border-radius: 1.4rem;
+
+  width: 26rem;
+  height: 11rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.authors .arrow {
+  display: block;
+}
+.authors:hover .arrow {
+  display: none;
+}
+
+.authors .author {
+  display: none;
+}
+
+.authors:hover .author {
+  visibility: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.authors .author .pic-border {
+  width: 4.7rem;
+  height: 4.7rem;
+  border-radius: 50%;
+  border: 1px solid orange;
+
+  display: grid;
+  place-items: center;
+}
+
+.authors .author .pic-container {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  overflow: hidden;
+
+  background: linear-gradient(
+    180deg,
+    hsla(47, 94%, 56%) 0%,
+    hsla(0, 96%, 63%) 100%
+  );
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.authors .author img {
+  width: 3.6rem;
+}
+
+.authors .author:nth-child(3) img {
+  width: 4rem;
+}
+
+.authors .author p {
+  font-size: 1.4rem;
+  color: white;
+}
+
+.authors .author .social-icons {
+  display: flex;
+  gap: 0.7rem;
+}
+
+.authors .author a {
+  text-decoration: none;
+  appearance: none;
+}
+
+.authors .author svg {
+  width: 2rem;
+}
+
+.authors .author svg path:nth-child(2) {
+  fill: white;
+}
+
+/*========== NAV ==========*/
+nav {
+  width: 100%;
+  background: linear-gradient(rgb(104, 177, 223, 0.8), rgb(69, 120, 165, 0.9));
+}
+
+nav .wrapper {
+  height: 4.7vw;
+  padding-inline: 1.56vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav h2 {
+  font-size: 1.5vw;
+  color: white;
+}
+
+nav button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 16.4vw;
+  height: 3vw;
+  padding-inline: 0.78vw;
+}
+
+
+nav button::after {
+  content: "";
+  background: black;
+  width: 1.25vw;
+  height: 0.1rem;
+}
+
+nav button:hover::after {
+  background: white;
+}
+
+/*========== SECTION ==========*/
+
+.content {
+  padding-bottom: 2.34vw;
+}
+
+.content .wrapper {
+  background: hsla(0, 0%, 100%, 0.5);
+}
+
+.content .wrapper .cards {
+  padding-inline: 1.5vw;
+  padding-top: 0.88vw;
+  padding-bottom: 1.56vw;
+
+}
+
+.content .wrapper .card {
+  width: 20vw;
+  
+
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 0.78vw;
+  height: 3.5vw;
+  width: 100%;
+  background: linear-gradient(rgb(104, 177, 223), rgb(69, 120, 165));
+}
+
+.card-title div {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.card-title div img {
+  width: 2vw;
+}
+
+.card-title p {
+  color: white;
+  font-size: 1vw;
+  text-transform: uppercase;
+}
+
+.card-title div span {
+  font-size: .6vw;
+  color: white;
+}
+
+.card img {
+  width: 100%;
+  
+}
+
+.card .plane-name-price {
+  width: 100%;
+  height: 2.4vw;
+  background: #35546f;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 1.5rem;
+}
+
+.plane-name-price p {
+  display: inline-block;
+  color: white;
+  font-size: 1vw;
+  text-transform: uppercase;
+}
+
+body::after {
+  content: '@All rights reserved to Rockstar Games Inc.';
+  font-size: .83vw;
+  text-align: center;
+  display: block;
+  padding-bottom: 1rem;
+}
+
+/*========== PLANE INFO ==========*/
+.content .plane-info {
+  display: flex;
+  gap: 1.3vw;
+  margin-inline: 1.56vw;
+  margin-bottom: 1.3vw;
+}
+
+.content .plane-info img {
+  margin-top: 1.56vw;
+  width: 40.31vw;
+}
+
+.content .plane-info button {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 3vw;
+
+  margin-top: 1.2vw;
+  margin-bottom: 1.82vw;
+  font-size: 1.5vw;
+}
+
+.content .plane-info p {
+  font-size: 1.6rem;
+}
+
+.content .plane-info-bar {
+  margin-bottom: 0.67vw; /* plus 1.7 of cards top = 3rem */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 1.56vw;
+
+  height: 4.68vw;
+  width: 100%;
+  background: linear-gradient(rgb(104, 177, 223, 0.8), rgb(69, 120, 165, 0.9));
+}
+
+.content .plane-info-bar h2{
+  font-size: 1.82vw;
+  color: white;
+}
+
+.content .plane-info-bar button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 16.45vw;
+  height: 2.96vw;
+  padding-inline: 0.78vw;
+
+  font-size: 1.05vw;
+}
+
+.content .plane-info-bar button::after {
+  content: "";
+  background: black;
+  width: 1.25vw;
+  height: 0.1rem;
+}
+
+.content .plane-info-bar button:hover::after {
+  background: white;
+}
+
+/*========== PLANE CLICKED ==========*/
+body.clicked #home {
+  visibility: visible;
+}
+
+nav p{
+  font-size: 1.82vw;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+}
+
+body.clicked nav p,
+nav h2,
+nav button,
+body.clicked .content .plane-info,
+body.clicked .content .plane-info-bar {
+  display: flex;
+}
+
+body.clicked header {
+ height: 18.75vw; 
+}
+
+body.clicked header .texts h2,
+body.clicked header .texts p{
+  display: none;
+}
+
+/*========== PLANE UNCLICKED ==========*/
+body .content .plane-info,
+body .content .plane-info-bar,
+nav p,
+body.clicked nav h2,
+body.clicked nav button {
+  display: none;
+}
+
+/*========== PRICE ORDER ==========*/
+
+.orderList{
+  list-style: none;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 1.5vw;
+}
+
+nav button .arrowUp,
+#navButton2 .arrowUp{
+  width: 2.5vh;
+  display: none;
+}
+
+nav button .arrowDown,
+#navButton2 .arrowDown{
+  width: 2.5vh;
+  display: none;
+}
+
+nav #navButton1.orderListChange .arrowDown,
+nav #navButton1.orderListInverse .arrowUp,
+#navButton2.orderListInverse .arrowUp, 
+#navButton2.orderListChange .arrowDown {
+  display: block;
+}
+
+nav #navButton1.orderListInverse .arrowDown,
+nav #navButton1.orderListChange .arrowUp,
+#navButton2.orderListInverse .arrowDown,
+#navButton2.orderListChange .arrowUp {
+  display: none;
+}
+
+nav #navButton1.orderListInverse::after,
+nav #navButton1.orderListChange::after {
+  display: none;
+}
+
+#navButton2.orderListInverse::after,
+#navButton2.orderListChange::after {
+  display: none;
+}
+
+.orderListChange li:first-child{
+  order: 13;
+}
+
+.orderListChange li:nth-child(2){
+  order: 12;
+}
+
+.orderListChange li:nth-child(3){
+  order: 6;
+}
+
+.orderListChange li:nth-child(4){
+  order: 11;
+}
+
+.orderListChange li:nth-child(5){
+  order: 4;
+}
+
+.orderListChange li:nth-child(6){
+  order: 10;
+}
+
+.orderListChange li:nth-child(7){
+  order: 3;
+}
+
+.orderListChange li:nth-child(8){
+  order: 7;
+}
+
+.orderListChange li:nth-child(9){
+  order: 1;
+}
+
+.orderListChange li:nth-child(10){
+  order: 9;
+}
+
+.orderListChange li:nth-child(11){
+  order: 2;
+}
+
+.orderListChange li:nth-child(12){
+  order: 8;
+}
+
+.orderListChange li:nth-child(13){
+  order: 5;
+}
+
+/*========== PRICE ORDER INVERSE ==========*/
+
+.orderListChangeInverse li:nth-child(1){
+  order: 1;
+}
+
+.orderListChangeInverse li:nth-child(2){
+  order: 2;
+}
+
+.orderListChangeInverse li:nth-child(3){
+  order: 8;
+}
+
+.orderListChangeInverse li:nth-child(4){
+  order: 3;
+}
+
+.orderListChangeInverse li:nth-child(5){
+  order: 10;
+}
+
+.orderListChangeInverse li:nth-child(6){
+  order: 4;
+}
+
+.orderListChangeInverse li:nth-child(7){
+  order: 11;
+}
+
+.orderListChangeInverse li:nth-child(8){
+  order: 7;
+}
+
+.orderListChangeInverse li:nth-child(9){
+  order: 13;
+}
+
+.orderListChangeInverse li:nth-child(10){
+  order: 5;
+}
+
+.orderListChangeInverse li:nth-child(11){
+  order: 12;
+}
+
+.orderListChangeInverse li:nth-child(12){
+  order: 6;
+}
+
+.orderListChangeInverse li:nth-child(13){
+  order: 9;
+}
+
+/*========== MEDIA QUERIES ==========*/
+
+/* @media screen and (max-width: 900px) {
+  .wrapper{
+    width: fit-content;
+    display: flex;
+    justify-content: center; 
+  }
+
+  .content .wrapper .card{
+    width: 100%;
+  }
+
+  .orderList{
+    display: flex;
+    flex-direction: column;
+  }
+} */
